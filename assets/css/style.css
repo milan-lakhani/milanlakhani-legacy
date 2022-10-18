@@ -2,12 +2,57 @@ body {
   font-family: "Roboto Slab", serif;
   background-color: #131B1F;
   color: #F5F5F5;
+  position: relative;
+}
+
+nav{
+    position: fixed;
+    top: 3rem;
+    z-index: 99;
+}
+
+nav > ul{
+    display: flex;
+    padding: 0rem;
+}
+
+nav > ul> li{
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.svg-wrapper {
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    border-radius: 50%;
+    z-index: 99;    
+}
+
+
+.svg-wrapper:hover {
+    transition: .3s ease-out;
+    box-shadow: 1px 0px 20px white;
 }
 
 
 
+
+nav > ul > li > .svg-wrapper >  svg,img {
+    fill: #F5F5F5;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+
+
 section {
-    padding: 2rem 0rem;
+    padding: 3rem 0rem;
 }
 
 #hero {
@@ -16,6 +61,15 @@ section {
     background: url(../img/Milan_2_Ill_png.png) top right no-repeat;
     background-size: cover;
     position: relative;
+}
+
+section#skills {
+    padding-top: 6rem;
+}
+
+#letstalk {
+    background-color: #F5F5F5;
+    color: #131B1F;
 }
 
 .herofont {
@@ -40,11 +94,23 @@ section {
     transition: .5s ease-out;
     padding: 1rem 2rem;
     outline: none;
-    border: none;
+    border: 1px solid black;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
     color: #131B1F;
+    background-position: left;
+}
+
+.btn-primary.talkbtn {
+    background: linear-gradient(to left, black 50%, black 50%) right;
+
+}
+
+
+.btn-primary.talkbtn:hover {
+    color: #F5F5F5 ;
     background-position: left;
 }
 
@@ -92,15 +158,153 @@ ul {
     list-style: none;
 }
 
-ul > li {
+ul.work-ul > li {
     position: relative;
     margin-bottom: 1rem;
 }
 
-ul > li::before {
+ul.work-ul > li::before {
     content: "▹";
     position: absolute;
     left: -1.5rem;
     color: #F5F5F5;
+}
+
+footer {
+    padding: 4rem 0rem 2rem;
+}
+
+.contact-wrapper {
+    width: fit-content;
+    margin: auto;
+}
+
+.footer-items {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+.footer-items:hover {
+    text-decoration: none;
+    color: #F5F5F5;
+    opacity: 0.8;
+    background-position: left;
+}
+
+.footer-items > svg {
+    margin-right: 5px;
+    height: 2rem;
+    width: 2rem;
+    fill: #F5F5F5;
+}
+
+.footer-items.large {
+    margin-right: 1rem;
+}
+
+.footer-items.large > svg{
+    height: 3rem;
+    width: 3rem;
+}
+
+
+@media (max-width: 1024px) {
+    /* body {
+        background-color: red;
+        
+    } */
+
+    #hero {
+        background: url(../img/Milan_2_centered.png) center no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero-subtext {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .hero-content {
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .herofont {
+        margin-top: 115%!important;
+    }
+
+    .contact-wrapper {
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-items > svg {
+        margin-right: 5px;
+        margin-bottom: 0.5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: #F5F5F5;
+    }
+
+    .footer-items.large > svg {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .socialmedia-wrapper {
+        margin-top: 1rem;
+        justify-content: space-evenly!important;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+
+    nav {
+        width: 100%;
+    }
+
+    nav > ul {
+        margin: auto;
+        width: fit-content;
+    }
+
+    .tech-items {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: black;
+        margin: 0rem 1rem 0rem 0rem;
+        border-radius: 0.5rem;
+    }
+
+    .tech-items > svg {
+        margin-right: 5px;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .tech-category {
+        font-size: 1rem;
+    }
+
+    .btn-primary{
+        padding: 0.8rem 1.5rem;
+    }
+
+
 }
 
